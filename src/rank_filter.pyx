@@ -1,3 +1,6 @@
+#cython: profile=True, linetrace=True, binding=True
+
+
 from rank_filter cimport lineRankOrderFilter1D_floating_inplace_loop
 
 cimport cython
