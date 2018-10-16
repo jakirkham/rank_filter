@@ -73,7 +73,10 @@ elif os.name == "nt":
     library_dirs.append(os.path.dirname(libmatches[0]))
     libraries.append(os.path.splitext(os.path.basename(libmatches[0]))[0])
 
-define_macros = []
+define_macros = [
+    ("CYTHON_TRACE", "1"),
+    ("CYTHON_TRACE_NOGIL", "1"),
+]
 
 extra_compile_args = []
 
