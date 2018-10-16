@@ -73,6 +73,7 @@ elif os.name == "nt":
     library_dirs.append(os.path.dirname(libmatches[0]))
     libraries.append(os.path.splitext(os.path.basename(libmatches[0]))[0])
 
+define_macros = []
 
 extra_compile_args = []
 
@@ -123,6 +124,7 @@ setup(
                             include_dirs=include_dirs,
                             library_dirs=library_dirs,
                             libraries=libraries,
+                            define_macros=define_macros,
                             extra_compile_args=extra_compile_args,
                             language="c++")],
     zip_safe=False
